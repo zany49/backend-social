@@ -30,7 +30,7 @@ export const createpost = async (req,res)=>{
        
     }catch(err){
         console.log(err);
-        res.sendStatus(404);
+        res.json({error:"Error, please try again",err:err});
     }
 
 
@@ -49,6 +49,7 @@ export const allPost=async (req, res)=>{
         res.json(post)
     }catch(err){
         console.log(err);
+        res.json({error:"Error, please try again",err:err});
     }
 
 }
@@ -61,6 +62,7 @@ export const singlePost = async (req, res)=>{
         res.json(post);
     }catch(err){
         console.log(err);
+        res.json({error:"Error, please try again",err:err});
     }
 }
 export const updatePost= async (req, res) => {
@@ -72,6 +74,7 @@ export const updatePost= async (req, res) => {
         res.json(post);
     }catch(err){
         console.log(err)
+        res.json({error:"Error, please try again",err:err});
     }
 }
 export const deletePost= async (req, res) => {
@@ -81,6 +84,7 @@ export const deletePost= async (req, res) => {
         res.json({ok: true});
     }catch(err){
         console.log(err)
+        res.json({error:"Error, please try again",err:err});
     }
 }
 
@@ -97,6 +101,7 @@ export const likePost = async (req, res)=>{
         res.json(post)
     }catch(err){
         console.log(err)
+        res.json({error:"Error, please try again",err:err});
     }
 
 }
@@ -114,6 +119,7 @@ export const unlikePost = async (req, res)=>{
             res.json(post)
     }catch(err){
         console.log(err)
+        res.json({error:"Error, please try again",err:err});
     }
 
 
@@ -139,6 +145,7 @@ export const addthread =async(req, res)=>{
 
     }catch(err){
         console.log(err);
+        res.json({error:"Error, please try again",err:err});
     }
 }
 

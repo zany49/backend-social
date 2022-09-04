@@ -69,6 +69,7 @@ try{
     }
    
     const match = await comparePassword(password, user.password)
+    
     if(!match) 
     {
       return res.json({error:"Wrong password"})
