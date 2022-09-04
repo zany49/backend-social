@@ -1,0 +1,42 @@
+{
+  "name": "backend-social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -r esm server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zany49/backend-social.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zany49/backend-social/issues"
+  },
+  "homepage": "https://github.com/zany49/backend-social#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.2",
+    "esm": "^3.2.25",
+    "express": "^4.18.1",
+    "express-formidable": "^1.2.0",
+    "express-jwt": "^7.7.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.9.1",
+    "mongoose": "^6.5.4",
+    "nanoid": "^4.0.0",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.10",
+    "chai": "^4.3.6",
+    "jest": "^29.0.2",
+    "mocha": "^10.0.0"
+  }
+}
