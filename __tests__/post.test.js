@@ -27,7 +27,7 @@ it('should return need content, when content is empty ',async ()=>{
     }
 })
 
-it('should return need content, when content is empty ',async ()=>{
+it('should return error post, when content has error ',async ()=>{
     try{
         const req={
             body:{
@@ -35,12 +35,12 @@ it('should return need content, when content is empty ',async ()=>{
                 postedBy:"fake_username"
             }
         }
-        var  existing= await User.findOne({username: 'fake_username'})
+        var  existing= await User.findOne({username: req.body.postedBy})
        
         Post.create.mockResolvedValueOnce({
             _id:'111',
             content:"new content",
-            postedBy:'1234'
+            postedBy:existing._id
         })
         await createpost(req,res);
         expect(Post.create).toHaveBeenCalledWith({
